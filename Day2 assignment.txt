@@ -1,0 +1,26 @@
+DAY 2
+1.why we cannot call local variable from out side of function?
+2.where do we use filter map() and reduce() 
+
+1. We cannot call a local variable from outside a function because of scope rules in programming
+A local variable is created inside a function and exsits only during the execution of that function
+Outside the function the variable is out of scope so the program cannot access it
+
+def show()
+    x=10
+    print(x)
+show()
+print(x)
+
+x is a local variable inside the function show()
+outside the function x does not exist so python raise a Name error
+
+2. filter()
+used to select elements from a sequence based on a condition.
+nums = [1,2,3,4]
+evens = list(filter(lambda x: x % 2 == 0, nums))
+
+map()
+used to apply an operation to each element of a sequence
+nums = [1,2,3,4]
+squares = list(map(lambda x: x*x, nums))
